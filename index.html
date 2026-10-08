@@ -3,45 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oil and Gas Global Limited</title>
+  <title>Dio-Limited</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      font-family: Arial, sans-serif;
       color: #333;
-      line-height: 1.6;
+      background: #f4f6f8;
     }
 
-    /* Hero Section with Clear Background */
     header {
-      background: linear-gradient(135deg, rgba(0, 33, 71, 0.85) 0%, rgba(0, 102, 204, 0.75) 100%), 
-                  url('6a90a349-9336-4dfc-9db3-3d48d2c2f70b.jpeg') no-repeat center center;
-      background-size: cover;
-      background-attachment: fixed;
-      color: #fff;
-      padding: 120px 20px;
-      text-align: center;
       position: relative;
-      min-height: 600px;
+      min-height: 580px;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-image: url('6a90a349-9336-4dfc-9db3-3d48d2c2f70b.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      overflow: hidden;
     }
 
     header::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
+      inset: 0;
+      background: rgba(2, 23, 44, 0.60);
       z-index: 0;
     }
 
@@ -51,176 +45,111 @@
     }
 
     header h1 {
-      font-size: 3.5em;
-      font-weight: 700;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      font-size: 3.2em;
+      margin: 0;
       letter-spacing: 1px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
 
     header p {
-      font-size: 1.4em;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-      font-weight: 300;
+      font-size: 1.3em;
+      margin-top: 12px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
 
     .cta {
-      margin-top: 20px;
+      margin-top: 24px;
       display: flex;
-      gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 12px;
     }
 
     .cta a, .cta button {
       display: inline-block;
-      padding: 14px 35px;
+      padding: 14px 28px;
       background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
       color: #fff;
       text-decoration: none;
       border-radius: 6px;
-      border: 2px solid #fff;
-      cursor: pointer;
-      font-size: 1.1em;
+      border: none;
       font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
     .cta a:hover, .cta button:hover {
-      background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+      background: linear-gradient(135deg, #0056b3 0%, #003f8a 100%);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
     }
 
-    .cta a:active, .cta button:active {
-      transform: translateY(0);
-    }
-
-    /* Sections */
     section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    section:nth-child(even) {
-      background-color: #f9f9f9;
+      padding: 70px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
     }
 
     section h2 {
       text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 50px;
-      color: #002147;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 20px;
+      margin-bottom: 35px;
+      font-size: 2.6em;
+      color: #0d2b49;
     }
 
-    section h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg, #007BFF, #0056b3);
-      border-radius: 2px;
-    }
-
-    section p {
-      font-size: 1.1em;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: center;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Cards Layout */
     .services, .why-choose {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .card {
-      padding: 30px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
+      flex: 1 1 260px;
+      max-width: 300px;
+      margin: 15px;
+      padding: 24px 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       border-top: 4px solid #007BFF;
-      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
     }
 
     .card h3 {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      color: #002147;
-      font-weight: 700;
+      margin-bottom: 10px;
+      color: #0d2b49;
+      text-align: center;
     }
 
     .card p {
-      color: #666;
-      font-size: 1em;
-      line-height: 1.5;
+      margin: 0;
+      color: #555;
+      line-height: 1.6;
+      text-align: center;
     }
 
-    /* About Section */
-    #about {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.95) 100%);
-    }
-
-    /* Contact Section */
-    #contact {
-      background: linear-gradient(135deg, #f5f5f5 0%, #ececec 100%);
-    }
-
-    #account {
-      background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f7 100%);
-    }
-
-    /* Footer */
     footer {
-      background: linear-gradient(135deg, #002147 0%, #003d7a 100%);
+      background-color: #222;
       color: #fff;
       text-align: center;
-      padding: 40px 20px;
-      margin-top: 60px;
-    }
-
-    footer p {
-      font-size: 1em;
-      margin: 0;
-      text-align: center;
+      padding: 30px 20px;
     }
 
     footer a {
-      color: #4db8ff;
+      color: #007BFF;
       text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
     }
 
-    footer a:hover {
-      color: #fff;
-    }
-
-    /* Responsive Design */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2.2em;
+        font-size: 2.5em;
       }
 
       header p {
@@ -233,93 +162,51 @@
       }
 
       .cta a, .cta button {
-        width: 100%;
-        max-width: 300px;
+        width: min(80%, 300px);
       }
-
-      section {
-        padding: 50px 20px;
-      }
-
-      section h2 {
-        font-size: 2em;
-      }
-
-      .services, .why-choose {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Accessibility */
-    a:focus, button:focus {
-      outline: 3px solid #007BFF;
-      outline-offset: 2px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Oil and Gas Global Limited</h1>
-    <p>Powering Progress, Fueling the Future</p>
-    <div class="cta">
-      <a href="#contact">Get Started</a>
-      <a href="#about">Learn More</a>
+    <div>
+      <h1>Oil and Gas Global Limited</h1>
+      <p>Powering Progress, Fueling the Future</p>
+      <div class="cta">
+        <a href="#contact">Get Started</a>
+        <a href="#about">Learn More</a>
+      </div>
     </div>
   </header>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Oil and Gas Global Limited is a leading provider of energy solutions, specializing in exploration, production, and distribution of oil and gas resources worldwide. We are committed to delivering sustainable and efficient energy solutions with cutting-edge technology and industry expertise.</p>
+    <p>Oil and Gas Global Limited is a leading provider of energy solutions, specializing in exploration, production, and distribution of oil and gas resources worldwide. We are committed to delivering sustainable and efficient energy solutions.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="card">
-        <h3>🔍 Exploration</h3>
-        <p>Advanced geological and seismic technologies to discover new reserves with precision and reliability.</p>
-      </div>
-      <div class="card">
-        <h3>⚙️ Production</h3>
-        <p>Efficient extraction processes ensuring maximum output with minimal environmental impact.</p>
-      </div>
-      <div class="card">
-        <h3>🌍 Distribution</h3>
-        <p>Reliable global supply chain delivering energy where it's needed most, on time, every time.</p>
-      </div>
-      <div class="card">
-        <h3>♻️ Sustainability</h3>
-        <p>Investing in renewable energy and reducing carbon footprint for a better tomorrow.</p>
-      </div>
+      <div class="card"><h3>Exploration</h3><p>Advanced geological and seismic technologies to discover new reserves.</p></div>
+      <div class="card"><h3>Production</h3><p>Efficient extraction processes ensuring maximum output with minimal environmental impact.</p></div>
+      <div class="card"><h3>Distribution</h3><p>Reliable global supply chain delivering energy where it’s needed most.</p></div>
+      <div class="card"><h3>Sustainability</h3><p>Investing in renewable energy and reducing carbon footprint.</p></div>
     </div>
   </section>
 
   <section id="why">
     <h2>Why Choose Us</h2>
     <div class="why-choose">
-      <div class="card">
-        <h3>🌐 Global Reach</h3>
-        <p>Operations spanning multiple continents with local expertise and international standards.</p>
-      </div>
-      <div class="card">
-        <h3>💡 Innovation</h3>
-        <p>Cutting-edge technology driving efficiency and staying ahead of industry trends.</p>
-      </div>
-      <div class="card">
-        <h3>🌱 Sustainability</h3>
-        <p>Commitment to responsible energy solutions protecting our environment.</p>
-      </div>
-      <div class="card">
-        <h3>👥 Expertise</h3>
-        <p>Experienced professionals with deep industry knowledge and proven track record.</p>
-      </div>
+      <div class="card"><h3>Global Reach</h3><p>Operations spanning multiple continents.</p></div>
+      <div class="card"><h3>Innovation</h3><p>Cutting-edge technology driving efficiency.</p></div>
+      <div class="card"><h3>Sustainability</h3><p>Commitment to responsible energy solutions.</p></div>
+      <div class="card"><h3>Expertise</h3><p>Experienced professionals with deep industry knowledge.</p></div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Get in touch with our support team for more information</p>
     <div class="cta">
       <a href="https://t.me/Oil_and_Gas_LTD" target="_blank">📨 Contact Support</a>
     </div>
@@ -327,9 +214,8 @@
 
   <section id="account">
     <h2>My Account Access</h2>
-    <p>Secure access to your account dashboard</p>
     <div class="cta">
-      <button onclick="openAccount()">🔐 Open My Account</button>
+      <button onclick="openAccount()">Open My Account</button>
     </div>
   </section>
 
