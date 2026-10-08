@@ -3,149 +3,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dio-Limited</title>
+  <title>Oil and Gas Global Limited</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background: #f1f1f1;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Hero Section with Clear Background */
     header {
-      background: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url('6a90a349-9336-4dfc-9db3-3d48d2c2f70b.jpeg') no-repeat center center;
+      background: linear-gradient(135deg, rgba(0, 33, 71, 0.85) 0%, rgba(0, 102, 204, 0.75) 100%), 
+                  url('6a90a349-9336-4dfc-9db3-3d48d2c2f70b.jpeg') no-repeat center center;
       background-size: cover;
       background-attachment: fixed;
       color: #fff;
-      padding: 80px 20px 40px;
+      padding: 120px 20px;
       text-align: center;
-      min-height: 620px;
+      position: relative;
+      min-height: 600px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+
     header h1 {
-      font-size: clamp(3rem, 7vw, 8rem);
-      line-height: 0.94;
-      margin: 0;
-      font-weight: 800;
-      letter-spacing: -0.06em;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      font-size: 3.5em;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
     }
+
     header p {
-      font-size: clamp(1.2rem, 2vw, 2.6rem);
-      margin-top: 22px;
+      font-size: 1.4em;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
       font-weight: 300;
-      letter-spacing: -0.03em;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
+
     .cta {
-      margin-top: 28px;
-      width: min(90vw, 760px);
+      margin-top: 20px;
       display: flex;
-      flex-direction: column;
-      gap: 18px;
-      align-items: center;
-    }
-    .cta a, .cta button {
-      display: block;
-      width: 100%;
-      padding: 22px 28px;
-      font-size: clamp(2rem, 2.8vw, 3rem);
-      line-height: 1.1;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 18px;
-      border: 2px solid rgba(255,255,255,0.9);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: center;
-    }
-    .cta a {
-      background: rgba(35, 118, 216, 0.9);
-      color: #fff;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-    }
-    .cta a:last-child {
-      background: rgba(255, 255, 255, 0.06);
-    }
-    .cta a:hover, .cta button:hover {
-      transform: translateY(-1px);
-      filter: brightness(1.04);
-    }
-    section {
-      padding: 70px 20px 60px;
-      background-color: rgba(255,255,255,0.85);
-    }
-    section h2 {
-      text-align: center;
-      margin: 0 auto 26px;
-      font-size: clamp(2.6rem, 4vw, 5.5rem);
-      font-weight: 700;
-      letter-spacing: -0.05em;
-      color: #1b1b1b;
-    }
-    .services, .why-choose {
-      display: flex;
+      gap: 15px;
+      justify-content: center;
       flex-wrap: wrap;
-      justify-content: space-around;
+    }
+
+    .cta a, .cta button {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #fff;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta a:hover, .cta button:hover {
+      background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta a:active, .cta button:active {
+      transform: translateY(0);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .card {
-      flex: 1 1 280px;
-      margin: 15px;
-      padding: 26px 22px;
-      background-color: rgba(255,255,255,0.9);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    section:nth-child(even) {
+      background-color: #f9f9f9;
     }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 50px;
+      color: #002147;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #007BFF, #0056b3);
+      border-radius: 2px;
+    }
+
+    section p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Cards Layout */
+    .services, .why-choose {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border-top: 4px solid #007BFF;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
     .card h3 {
       font-size: 1.5em;
-      margin-top: 0;
-      color: #0d0d0d;
+      margin-bottom: 15px;
+      color: #002147;
+      font-weight: 700;
     }
+
+    .card p {
+      color: #666;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    /* About Section */
+    #about {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.95) 100%);
+    }
+
+    /* Contact Section */
+    #contact {
+      background: linear-gradient(135deg, #f5f5f5 0%, #ececec 100%);
+    }
+
+    #account {
+      background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f7 100%);
+    }
+
+    /* Footer */
     footer {
-      background-color: #222;
+      background: linear-gradient(135deg, #002147 0%, #003d7a 100%);
       color: #fff;
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
+      margin-top: 60px;
     }
-    footer a {
-      color: #007BFF;
-      text-decoration: none;
-    }
-    #contact {
+
+    footer p {
+      font-size: 1em;
+      margin: 0;
       text-align: center;
     }
-    .divider {
-      width: 180px;
-      height: 6px;
-      background: linear-gradient(90deg, #1b82f5 0%, #23d2ff 100%);
-      border-radius: 999px;
-      margin: 0 auto 24px;
+
+    footer a {
+      color: #4db8ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
-      header {
-        min-height: 530px;
-        padding-top: 60px;
+      header h1 {
+        font-size: 2.2em;
       }
+
+      header p {
+        font-size: 1.1em;
+      }
+
       .cta {
-        width: min(90vw, 560px);
+        flex-direction: column;
+        align-items: center;
       }
+
       .cta a, .cta button {
-        font-size: 1.7rem;
+        width: 100%;
+        max-width: 300px;
       }
+
+      section {
+        padding: 50px 20px;
+      }
+
+      section h2 {
+        font-size: 2em;
+      }
+
+      .services, .why-choose {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Accessibility */
+    a:focus, button:focus {
+      outline: 3px solid #007BFF;
+      outline-offset: 2px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Oil and Gas Global</h1>
-    <h1 style="margin-top: 0;">Limited</h1>
+    <h1>Oil and Gas Global Limited</h1>
     <p>Powering Progress, Fueling the Future</p>
-
     <div class="cta">
       <a href="#contact">Get Started</a>
       <a href="#about">Learn More</a>
@@ -154,41 +270,66 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <div class="divider"></div>
-    <p style="max-width: 900px; margin: 0 auto; font-size: 1.1em; line-height: 1.8; text-align: center;">Oil and Gas Global Limited is a leading provider of energy solutions, specializing in exploration, production, and distribution of oil and gas resources worldwide. We are committed to delivering sustainable and efficient energy solutions.</p>
+    <p>Oil and Gas Global Limited is a leading provider of energy solutions, specializing in exploration, production, and distribution of oil and gas resources worldwide. We are committed to delivering sustainable and efficient energy solutions with cutting-edge technology and industry expertise.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="card"><h3>Exploration</h3><p>Advanced geological and seismic technologies to discover new reserves.</p></div>
-      <div class="card"><h3>Production</h3><p>Efficient extraction processes ensuring maximum output with minimal environmental impact.</p></div>
-      <div class="card"><h3>Distribution</h3><p>Reliable global supply chain delivering energy where it’s needed most.</p></div>
-      <div class="card"><h3>Sustainability</h3><p>Investing in renewable energy and reducing carbon footprint.</p></div>
+      <div class="card">
+        <h3>🔍 Exploration</h3>
+        <p>Advanced geological and seismic technologies to discover new reserves with precision and reliability.</p>
+      </div>
+      <div class="card">
+        <h3>⚙️ Production</h3>
+        <p>Efficient extraction processes ensuring maximum output with minimal environmental impact.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Distribution</h3>
+        <p>Reliable global supply chain delivering energy where it's needed most, on time, every time.</p>
+      </div>
+      <div class="card">
+        <h3>♻️ Sustainability</h3>
+        <p>Investing in renewable energy and reducing carbon footprint for a better tomorrow.</p>
+      </div>
     </div>
   </section>
 
   <section id="why">
     <h2>Why Choose Us</h2>
     <div class="why-choose">
-      <div class="card"><h3>Global Reach</h3><p>Operations spanning multiple continents.</p></div>
-      <div class="card"><h3>Innovation</h3><p>Cutting-edge technology driving efficiency.</p></div>
-      <div class="card"><h3>Sustainability</h3><p>Commitment to responsible energy solutions.</p></div>
-      <div class="card"><h3>Expertise</h3><p>Experienced professionals with deep industry knowledge.</p></div>
+      <div class="card">
+        <h3>🌐 Global Reach</h3>
+        <p>Operations spanning multiple continents with local expertise and international standards.</p>
+      </div>
+      <div class="card">
+        <h3>💡 Innovation</h3>
+        <p>Cutting-edge technology driving efficiency and staying ahead of industry trends.</p>
+      </div>
+      <div class="card">
+        <h3>🌱 Sustainability</h3>
+        <p>Commitment to responsible energy solutions protecting our environment.</p>
+      </div>
+      <div class="card">
+        <h3>👥 Expertise</h3>
+        <p>Experienced professionals with deep industry knowledge and proven track record.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <div class="cta" style="width: min(90vw, 540px); margin: 0 auto;">
+    <p>Get in touch with our support team for more information</p>
+    <div class="cta">
       <a href="https://t.me/Oil_and_Gas_LTD" target="_blank">📨 Contact Support</a>
     </div>
   </section>
 
   <section id="account">
     <h2>My Account Access</h2>
-    <div class="cta" style="width: min(90vw, 540px); margin: 0 auto;">
-      <button onclick="openAccount()">Open My Account</button>
+    <p>Secure access to your account dashboard</p>
+    <div class="cta">
+      <button onclick="openAccount()">🔐 Open My Account</button>
     </div>
   </section>
 
