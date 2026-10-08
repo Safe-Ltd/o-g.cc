@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oil and Gas Global Limited</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: url('placeholder-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .cta {
+      margin-top: 20px;
+    }
+    .cta a, .cta button {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 5px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+    .cta a:hover, .cta button:hover {
+      background-color: #0056b3;
+    }
+    section {
+      padding: 60px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .services, .why-choose {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .card {
+      flex: 1 1 300px;
+      margin: 15px;
+      padding: 20px;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Oil and Gas Global Limited</h1>
+    <p>Powering Progress, Fueling the Future</p>
+    <div class="cta">
+      <a href="#contact">Get Started</a>
+      <a href="#about">Learn More</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Oil and Gas Global Limited is a leading provider of energy solutions, specializing in exploration, production, and distribution of oil and gas resources worldwide. We are committed to delivering sustainable energy while driving economic growth and innovation.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card"><h3>Exploration</h3><p>Advanced geological and seismic technologies to discover new reserves.</p></div>
+      <div class="card"><h3>Production</h3><p>Efficient extraction processes ensuring maximum output with minimal environmental impact.</p></div>
+      <div class="card"><h3>Distribution</h3><p>Reliable global supply chain delivering energy where it’s needed most.</p></div>
+      <div class="card"><h3>Sustainability</h3><p>Investing in renewable energy and reducing carbon footprint.</p></div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>Why Choose Us</h2>
+    <div class="why-choose">
+      <div class="card"><h3>Global Reach</h3><p>Operations spanning multiple continents.</p></div>
+      <div class="card"><h3>Innovation</h3><p>Cutting-edge technology driving efficiency.</p></div>
+      <div class="card"><h3>Sustainability</h3><p>Commitment to responsible energy solutions.</p></div>
+      <div class="card"><h3>Expertise</h3><p>Experienced professionals with deep industry knowledge.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Headquarters: Global Energy Hub, London, UK</p>
+    <p>📞 Phone: <a href="tel:+442079460000">+44 20 7946 0000</a></p>
+    <p>📧 Email: <a href="mailto:info@oilgasglobal.com">info@oilgasglobal.com</a></p>
+    <div class="cta">
+      <a href="#quote">Request a Quote</a>
+      <a href="#partner">Partner With Us</a>
+    </div>
+  </section>
+
+  <!-- Dependable button section -->
+  <section id="account">
+    <h2>My Account Access</h2>
+    <div class="cta">
+      <button onclick="openAccount()">Open My Account</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Oil and Gas Global Limited. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openAccount() {
+      const input = prompt("Please enter your password:");
+      if (input === "09118122517") {
+        window.location.href = "https://google.com";
+      } else {
+        alert("Incorrect password. Access denied.");
+      }
+    }
+  </script>
+
+</body>
+</html>
+
